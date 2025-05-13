@@ -1,0 +1,103 @@
+.hjk{
+  background: linear-gradient(358deg, #aeffd2 0%, #c0eb70 100%);
+  min-height: 100vh;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(358deg, #aeffd2 0%, #c0eb70 100%);
+  min-height: 100vh;
+  padding-top: 80px;
+}
+ 
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+ 
+.navbar-brand {
+  color: #2d6a4f;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.navbar .btn-rounded.logout-btn {
+  color: #dc3545; /* Red color for text and icon */
+ 
+}
+ 
+.logo-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+ 
+.btn-rounded {
+  border-radius: 30px;
+}
+ 
+.product-card {
+  background-color: white;
+  border-radius: 40px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  height: 250px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
+}
+ 
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #d7f7d4;
+}
+ 
+.product-card h5 {
+  color: #1b4332;
+  font-weight: bold;
+}
+ 
+.badge {
+  font-size: 0.85rem;
+}
+ 
+.description {
+  font-size: 0.95rem;
+  color: #444;
+}.card-content{
+  display: flex;
+  flex-direction: column;
+}
+ 
+.card-body{
+  height: 250px;
+ 
+}
+ 
+.badge-low {
+  background-color: #d4edda;
+  color: #155724;
+}
+ 
+.badge-moderate {
+  background-color: #fff3cd;
+  color: #856404;
+}
+ 
+.badge-high {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+ 
+@media (max-width: 768px) {
+  .product-card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+}
+ 
+@media (max-width: 576px) {
+  .product-card {
+    padding: 0.5rem;
+  }
+}

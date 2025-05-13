@@ -1,0 +1,85 @@
+<div class="signup-wrapper">
+  <div class="signup-card">
+    <div class="text-center logo-heading">
+      <img src="assets/logo1.png" alt="WisVest Logo" class="logo" />
+      <h2>Create Your Account</h2>
+    </div>
+   
+ 
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <!-- First Name -->
+      <div class="mb-3">
+        <label for="firstName" class="form-label">First Name</label>
+        <input id="firstName" type="text" formControlName="firstName" class="form-control" />
+        <ng-container *ngIf="signupForm.get('firstName') as firstNameCtrl">
+          <div class="error" *ngIf="firstNameCtrl.touched && firstNameCtrl.errors">
+            <span *ngIf="firstNameCtrl.errors['required']">First Name is required.</span>
+            <span *ngIf="firstNameCtrl.errors['pattern']">Only alphabets allowed.</span>
+          </div>
+        </ng-container>
+      </div>
+ 
+      <!-- Last Name -->
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input id="lastName" type="text" formControlName="lastName" class="form-control" />
+        <ng-container *ngIf="signupForm.get('lastName') as lastNameCtrl">
+          <div class="error" *ngIf="lastNameCtrl.touched && lastNameCtrl.errors">
+            <span *ngIf="lastNameCtrl.errors['required']">Last Name is required.</span>
+            <span *ngIf="lastNameCtrl.errors['pattern']">Only alphabets allowed.</span>
+          </div>
+        </ng-container>
+      </div>
+ 
+      <!-- Email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          class="form-control"
+          [ngClass]="{
+            'is-invalid': emailExists || (signupForm.get('email')?.invalid && signupForm.get('email')?.touched)
+          }"
+        />
+        <ng-container *ngIf="signupForm.get('email') as emailCtrl">
+          <div class="error" *ngIf="emailCtrl.touched && emailCtrl.invalid">
+            Enter a valid Email.
+          </div>
+        </ng-container>
+        <div class="error" *ngIf="emailExists">
+          Email already exists.
+        </div>
+      </div>
+ 
+      <!-- Password -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" type="password" formControlName="password" class="form-control" />
+        <ng-container *ngIf="signupForm.get('password') as passwordCtrl">
+          <div class="error" *ngIf="passwordCtrl.touched && passwordCtrl.invalid">
+            Password must be at least 8 characters and include upper, lower, number, and special character.
+          </div>
+        </ng-container>
+      </div>
+ 
+      <!-- Confirm Password -->
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input id="confirmPassword" type="password" formControlName="confirmPassword" class="form-control" />
+        <div class="error" *ngIf="signupForm.hasError('mismatch') && signupForm.get('confirmPassword')?.touched">
+          Passwords do not match.
+        </div>
+      </div>
+ 
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="signupForm.invalid || isSubmitting" class="btn btn-green">Sign Up</button>
+    </form>
+ 
+    <p class="form-text mt-3">
+      Already have an account?
+      <button class="btn btn-link text-success p-0" (click)="navigateToLogin()">Login</button>
+    </p>
+  </div>
+</div>

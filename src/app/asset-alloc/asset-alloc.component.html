@@ -1,0 +1,24 @@
+<div class="button-group">
+    <ng-container *ngIf="type === 'asset'">
+      <div class="subclass-buttons">
+        <button
+          class="btn"
+          *ngFor="let asset of assetClasses"
+          (click)="selectAsset(asset.name)">
+          {{ asset.name }} ({{ asset.percentage }}%)
+        </button>
+      </div>
+    </ng-container>
+  
+    <ng-container *ngIf="type === 'subclass'">
+      <div class="subclass-buttons">
+        <button
+          class="btn"
+          *ngFor="let sub of subClasses"
+          (click)="selectSubClass(sub.name)">
+          {{ sub.name }} ({{ sub.percentage }}%)
+        </button>
+      </div>
+    </ng-container>
+  </div>
+  

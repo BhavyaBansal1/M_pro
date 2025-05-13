@@ -1,0 +1,180 @@
+<nav class="navbar navbar-expand-lg navbar-light px-4">
+  <a class="navbar-brand d-flex align-items-center">
+    <img src="assets/logo1.png" alt="WisVest Logo" class="logo-img" />
+    WisVest
+  </a>
+  <div class="ms-auto d-flex gap-3">
+    <a routerLink="/home" class="btn btn-outline-success btn-rounded" (click)="home()">Home</a>
+    <a routerLink="/input" class="btn btn-outline-success btn-rounded" (click)="input()">Input</a>
+    <a routerLink="/products" class="btn btn-outline-success btn-rounded" (click)="products()">Products</a>
+   
+    <a routerLink="/login" class="btn btn-rounded logout-btn d-flex align-items-center gap-2" (click)="logout()">
+      <i class="fas fa-sign-out-alt"></i> Logout
+    </a>
+  </div>
+</nav>
+<div class="container">
+  <!-- Header -->
+  <h1 class="title">Recommended Portfolio</h1>
+  <br>
+  <br>
+  <div class="charts">
+    <!-- Static Asset Class Pie Chart -->
+    <div class="chart-box">
+      <canvas baseChart
+        [data]="{
+          labels: assetClassChartLabels,
+          datasets: [{ data: assetClassChartData,
+            backgroundColor: assetClassChartColors,
+          }],
+        }"
+        [type]="pieChartType"
+        [options]="pieChartOptions">
+      </canvas>
+      <p class="chart-label">Total Investment Amount = ₹{{ portfolioData?.totalAmount }}</p>
+    </div>
+  
+    <!-- Sub-Category Pie Chart (Dynamic) -->
+    <div class="chart-box">
+      <app-chart [subClasses]="subClasses"></app-chart>
+      <p class="chart-label">{{ selectedAssetClass }} Sub-Category Distribution</p>
+    </div>
+  </div>
+  
+  <!-- Asset Class Buttons -->
+  <section class="selector-section">
+    <h2>Select Asset Class</h2>
+    <div class="asset-buttons">
+      <button *ngFor="let asset of assetClassChartData; let i = index" 
+          (click)="onAssetSelected(assetClassChartLabels[i])"
+          class="asset-button">
+      {{ assetClassChartLabels[i] }} - {{ asset }}%
+      </button>
+    </div>
+    </section>
+
+    <style>
+    .asset-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .asset-button {
+      background: white;
+    border: 2px solid #064635;
+    color: #064635;
+    padding: 14px 28px; /* Increased size */
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px #999;
+    font-size: 1.1rem; /* Slightly bigger text */
+    margin: 6px; /* Adds space between buttons */
+    }
+
+    .asset-button:hover {
+      background-color: #7aa68c;
+      transform: scale(1.1);
+    }
+
+    .asset-button:active {
+      background-color: #1e8449;
+    }
+    </style>
+
+  <!-- Sub-Class Buttons -->
+  <section class="selector-section">
+    <h2>Select Sub Class</h2>
+    <app-assets
+      [type]="'subclass'"
+      [subClasses]="subClasses"
+      (subClassSelected)="onSubClassSelected($event)">
+    </app-assets>
+  </section>
+
+  <!-- Products Table -->
+  <section class="products-section">
+    <h2>Products</h2>
+        <!-- Replace <app-products> with this table -->
+    <table class="product-table">
+      <thead>
+        <tr>
+          <th>Product Name</th>
+          <th>Annual Return (%)</th>
+          <th>Asset Class</th>
+          <th>Sub-Asset Class</th>
+          <th>Liquidity</th>
+          <th>Risk Level</th>
+          <th>Investment Amount (₹)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts">
+          <td>{{ product.product_name }}</td>
+          <td>{{ product.annual_return }}</td>
+          <td>{{ product.asset_class }}</td>
+          <td>{{ product.sub_asset_class }}</td>
+          <td>{{ product.liquidity }}</td>
+          <td>{{ product.risk_level || 'N/A' }}</td>
+          <td>{{ product.investmentAmount }}</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!-- <style>
+      .product-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-family: 'Arial', sans-serif;
+      background-color: #ecf0f1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .product-table th,
+      .product-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+      font-size: 14px;
+      }
+
+      .product-table th {
+      background-color: #064635;
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      }
+
+      .product-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+      }
+
+      .product-table tr:nth-child(odd) {
+      background-color: #ffffff;
+      }
+
+      .product-table tr:hover {
+      background-color: #d1f2eb;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      }
+
+      .product-table td {
+      color: #34495e;
+      }
+
+      .product-table td:first-child {
+      font-weight: bold;
+      color: #2c3e50;
+      }
+    </style> -->
+  </section>
+</div>

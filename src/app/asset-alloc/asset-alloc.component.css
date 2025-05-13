@@ -1,0 +1,33 @@
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  button {
+    background: white;
+    border: 2px solid #064635;
+    color: #064635;
+    padding: 14px 28px; 
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 4px #999;
+    font-size: 1.1rem; 
+    margin: 6px; 
+  }
+  
+  button:hover {
+    background-color: #7aa68c;
+    color: white;
+  }
+  
