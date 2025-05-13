@@ -1,0 +1,86 @@
+2025-05-13 11:33:18.946 +05:30 [INF] User profile is available. Using 'C:\Users\Bhavya Bansal\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-13 11:33:19.107 +05:30 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5251: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(ListenOptions[] listenOptions, AddressBindContext context, Func`2 useHttps, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__15_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2025-05-13 11:33:41.509 +05:30 [INF] User profile is available. Using 'C:\Users\Bhavya Bansal\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-13 11:33:41.607 +05:30 [INF] Now listening on: http://localhost:5251
+2025-05-13 11:33:41.612 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-13 11:33:41.614 +05:30 [INF] Hosting environment: Development
+2025-05-13 11:33:41.615 +05:30 [INF] Content root path: C:\Users\Bhavya Bansal\OneDrive\Desktop\finalp\backend
+2025-05-13 11:44:36.696 +05:30 [INF] Application is shutting down...
+2025-05-13 11:45:56.941 +05:30 [INF] User profile is available. Using 'C:\Users\Bhavya Bansal\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-13 11:45:57.037 +05:30 [INF] Now listening on: http://localhost:5251
+2025-05-13 11:45:57.043 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-13 11:45:57.046 +05:30 [INF] Hosting environment: Development
+2025-05-13 11:45:57.047 +05:30 [INF] Content root path: C:\Users\Bhavya Bansal\OneDrive\Desktop\finalp\backend
+2025-05-13 11:48:19.376 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/Auth/register - null null
+2025-05-13 11:48:19.452 +05:30 [INF] CORS policy execution successful.
+2025-05-13 11:48:19.468 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/Auth/register - 204 null null 93.7029ms
+2025-05-13 11:48:19.480 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/Auth/register - application/json 66
+2025-05-13 11:48:19.488 +05:30 [INF] CORS policy execution successful.
+2025-05-13 11:48:19.493 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AuthController.Register (WisVest)'
+2025-05-13 11:48:19.533 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(UserRegisterRequest) on controller WisVestAPI.Controllers.AuthController (WisVest).
+2025-05-13 11:48:19.635 +05:30 [INF] Checking if user with email bhavya.bansals214563@gmail.com exists.
+2025-05-13 11:48:19.638 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-13 11:48:19.651 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-13 11:48:19.680 +05:30 [INF] Executing BadRequestObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-13 11:48:19.710 +05:30 [INF] Executed action WisVestAPI.Controllers.AuthController.Register (WisVest) in 168.9882ms
+2025-05-13 11:48:19.712 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AuthController.Register (WisVest)'
+2025-05-13 11:48:19.714 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/Auth/register - 400 null application/json; charset=utf-8 234.9683ms
+2025-05-13 11:48:26.294 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/Auth/register - null null
+2025-05-13 11:48:26.299 +05:30 [INF] CORS policy execution successful.
+2025-05-13 11:48:26.301 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/Auth/register - 204 null null 6.999ms
+2025-05-13 11:48:26.303 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/Auth/register - application/json 67
+2025-05-13 11:48:26.305 +05:30 [INF] CORS policy execution successful.
+2025-05-13 11:48:26.306 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AuthController.Register (WisVest)'
+2025-05-13 11:48:26.307 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(UserRegisterRequest) on controller WisVestAPI.Controllers.AuthController (WisVest).
+2025-05-13 11:48:26.310 +05:30 [INF] Checking if user with email bhavya.bansals2124563@gmail.com exists.
+2025-05-13 11:48:26.311 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-13 11:48:26.312 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-13 11:48:26.440 +05:30 [INF] Attempting to add a new user.
+2025-05-13 11:48:26.443 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-13 11:48:26.444 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-13 11:48:26.446 +05:30 [INF] Attempting to save all users to JSON file.
+2025-05-13 11:48:26.454 +05:30 [INF] Users saved successfully to JSON file.
+2025-05-13 11:48:26.456 +05:30 [INF] User added successfully with ID 7.
+2025-05-13 11:48:26.458 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-13 11:48:26.461 +05:30 [INF] Executed action WisVestAPI.Controllers.AuthController.Register (WisVest) in 152.5918ms
+2025-05-13 11:48:26.462 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AuthController.Register (WisVest)'
+2025-05-13 11:48:26.463 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/Auth/register - 200 null application/json; charset=utf-8 159.4715ms
+2025-05-13 11:48:31.715 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/auth/login - null null
+2025-05-13 11:48:31.717 +05:30 [INF] CORS policy execution successful.
+2025-05-13 11:48:31.718 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/auth/login - 204 null null 3.0866ms
+2025-05-13 11:48:31.720 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/auth/login - application/json 67
+2025-05-13 11:48:31.723 +05:30 [INF] CORS policy execution successful.
+2025-05-13 11:48:31.724 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AuthController.Login (WisVest)'
+2025-05-13 11:48:31.731 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller WisVestAPI.Controllers.AuthController (WisVest).
+2025-05-13 11:48:31.737 +05:30 [INF] Fetching user with email bhavya.bansals2124563@gmail.com.
+2025-05-13 11:48:31.738 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-13 11:48:31.739 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-13 11:48:31.876 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-13 11:48:31.879 +05:30 [INF] Executed action WisVestAPI.Controllers.AuthController.Login (WisVest) in 146.0752ms
+2025-05-13 11:48:31.880 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AuthController.Login (WisVest)'
+2025-05-13 11:48:31.881 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/auth/login - 200 null application/json; charset=utf-8 160.9927ms

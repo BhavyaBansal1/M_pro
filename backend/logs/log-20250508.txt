@@ -1,0 +1,819 @@
+2025-05-08 21:18:23.182 +05:30 [INF] User profile is available. Using 'C:\Users\Bhavya Bansal\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-08 21:18:23.329 +05:30 [INF] Now listening on: http://localhost:5251
+2025-05-08 21:18:23.333 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-08 21:18:23.335 +05:30 [INF] Hosting environment: Development
+2025-05-08 21:18:23.336 +05:30 [INF] Content root path: C:\Users\Bhavya Bansal\OneDrive\Desktop\finalp\backend
+2025-05-08 21:18:30.986 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5251/ - null null
+2025-05-08 21:18:31.167 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5251/ - 404 0 null 182.0543ms
+2025-05-08 21:18:31.191 +05:30 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5251/, Response status code: 404
+2025-05-08 21:20:48.631 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/auth/login - null null
+2025-05-08 21:20:48.647 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:20:48.652 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/auth/login - 204 null null 22.2668ms
+2025-05-08 21:20:48.657 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/auth/login - application/json 65
+2025-05-08 21:20:48.871 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '5/6/2025 7:59:43 PM', Current time (UTC): '5/8/2025 3:50:48 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-08 21:20:48.904 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '5/6/2025 7:59:43 PM', Current time (UTC): '5/8/2025 3:50:48 PM'.
+2025-05-08 21:20:48.906 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:20:48.909 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AuthController.Login (WisVest)'
+2025-05-08 21:20:48.976 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller WisVestAPI.Controllers.AuthController (WisVest).
+2025-05-08 21:20:49.177 +05:30 [INF] Fetching user with email bhavya.bansals214563@gmail.com.
+2025-05-08 21:20:49.182 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-08 21:20:49.185 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-08 21:20:49.224 +05:30 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-08 21:20:49.269 +05:30 [INF] Executed action WisVestAPI.Controllers.AuthController.Login (WisVest) in 283.133ms
+2025-05-08 21:20:49.272 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AuthController.Login (WisVest)'
+2025-05-08 21:20:49.274 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/auth/login - 401 null application/json; charset=utf-8 616.9042ms
+2025-05-08 21:21:42.446 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/Auth/register - null null
+2025-05-08 21:21:42.452 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:21:42.454 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/Auth/register - 204 null null 7.8315ms
+2025-05-08 21:21:42.459 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/Auth/register - application/json 66
+2025-05-08 21:21:42.465 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '5/6/2025 7:59:43 PM', Current time (UTC): '5/8/2025 3:51:42 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-08 21:21:42.468 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '5/6/2025 7:59:43 PM', Current time (UTC): '5/8/2025 3:51:42 PM'.
+2025-05-08 21:21:42.470 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:21:42.471 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AuthController.Register (WisVest)'
+2025-05-08 21:21:42.477 +05:30 [INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(UserRegisterRequest) on controller WisVestAPI.Controllers.AuthController (WisVest).
+2025-05-08 21:21:42.492 +05:30 [INF] Checking if user with email bhavya.bansals214563@gmail.com exists.
+2025-05-08 21:21:42.496 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-08 21:21:42.499 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-08 21:21:42.809 +05:30 [INF] Attempting to add a new user.
+2025-05-08 21:21:42.811 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-08 21:21:42.813 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-08 21:21:42.817 +05:30 [INF] Attempting to save all users to JSON file.
+2025-05-08 21:21:42.840 +05:30 [INF] Users saved successfully to JSON file.
+2025-05-08 21:21:42.842 +05:30 [INF] User added successfully with ID 5.
+2025-05-08 21:21:42.845 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-08 21:21:42.847 +05:30 [INF] Executed action WisVestAPI.Controllers.AuthController.Register (WisVest) in 367.0693ms
+2025-05-08 21:21:42.849 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AuthController.Register (WisVest)'
+2025-05-08 21:21:42.850 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/Auth/register - 200 null application/json; charset=utf-8 391.2679ms
+2025-05-08 21:21:46.982 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/auth/login - null null
+2025-05-08 21:21:46.988 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:21:46.991 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/auth/login - 204 null null 8.5251ms
+2025-05-08 21:21:46.995 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/auth/login - application/json 66
+2025-05-08 21:21:46.998 +05:30 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '5/6/2025 7:59:43 PM', Current time (UTC): '5/8/2025 3:51:46 PM'.
+   at Microsoft.IdentityModel.Tokens.ValidatorUtilities.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateTokenPayloadAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ValidateJWSAsync(JsonWebToken jsonWebToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+2025-05-08 21:21:47.004 +05:30 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo (UTC): '5/6/2025 7:59:43 PM', Current time (UTC): '5/8/2025 3:51:46 PM'.
+2025-05-08 21:21:47.006 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:21:47.008 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AuthController.Login (WisVest)'
+2025-05-08 21:21:47.010 +05:30 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(LoginRequest) on controller WisVestAPI.Controllers.AuthController (WisVest).
+2025-05-08 21:21:47.013 +05:30 [INF] Fetching user with email bhavya.bansals214563@gmail.com.
+2025-05-08 21:21:47.016 +05:30 [INF] Attempting to load all users from JSON file.
+2025-05-08 21:21:47.017 +05:30 [INF] Users loaded successfully from JSON file.
+2025-05-08 21:21:47.273 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-08 21:21:47.278 +05:30 [INF] Executed action WisVestAPI.Controllers.AuthController.Login (WisVest) in 265.4438ms
+2025-05-08 21:21:47.279 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AuthController.Login (WisVest)'
+2025-05-08 21:21:47.281 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/auth/login - 200 null application/json; charset=utf-8 285.7012ms
+2025-05-08 21:22:01.995 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/Allocation/compute - null null
+2025-05-08 21:22:02.000 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:22:02.003 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/Allocation/compute - 204 null null 8.0221ms
+2025-05-08 21:22:02.006 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/Allocation/compute - application/json 110
+2025-05-08 21:22:02.026 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:22:02.037 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.AllocationController.GetAllocation (WisVest)'
+2025-05-08 21:22:02.050 +05:30 [INF] Route matched with {action = "GetAllocation", controller = "Allocation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[WisVestAPI.Models.DTOs.AllocationResultDTO]] GetAllocation(WisVestAPI.Models.DTOs.UserInputDTO) on controller WisVestAPI.Controllers.AllocationController (WisVest).
+2025-05-08 21:22:02.090 +05:30 [INF] Starting allocation calculation...
+2025-05-08 21:22:02.132 +05:30 [INF] Allocation matrix loaded successfully.
+2025-05-08 21:22:02.133 +05:30 [INF] Looking up base allocation for key: Low+Short
+2025-05-08 21:22:02.142 +05:30 [INF] Base allocation found: {"equity":10,"fixedIncome":40,"commodities":5,"cash":40,"realEstate":5}
+2025-05-08 21:22:02.147 +05:30 [INF] Looking up age adjustment rules for key: 30-45
+2025-05-08 21:22:02.149 +05:30 [INF] Age adjustments found: {}
+2025-05-08 21:22:02.150 +05:30 [INF] Looking up goal tuning for goal: Wealth Accumulation
+2025-05-08 21:22:02.165 +05:30 [INF] Goal tuning found: {"equity_priority":true,"equity_boost":2,"equity_threshold":40}
+2025-05-08 21:22:02.211 +05:30 [INF] Sub-allocations for equity: {"Large Cap":12.5,"Mid Cap":5,"Small Cap":2.5}
+2025-05-08 21:22:02.216 +05:30 [INF] Sub-allocations for fixedIncome: {"Gov Bonds":18.75,"Corp Bonds":7.5,"Fixed Dep":11.25}
+2025-05-08 21:22:02.219 +05:30 [INF] Sub-allocations for commodities: {"Precious Metals":1.56,"Energy":0.62,"Agriculture":0.31}
+2025-05-08 21:22:02.224 +05:30 [INF] Sub-allocations for cash: {"Liquid Mutual Funds":8.65,"Savings Acc":14.42,"T. Bill":14.42}
+2025-05-08 21:22:02.228 +05:30 [INF] Sub-allocations for realEstate: {"REITs":1,"Residential Prop":1,"Commercial Prop":0.5}
+2025-05-08 21:22:02.230 +05:30 [INF] Added sub-assets for equity: {"Large Cap":12.5,"Mid Cap":5,"Small Cap":2.5}
+2025-05-08 21:22:02.232 +05:30 [INF] Added sub-assets for fixedIncome: {"Gov Bonds":18.75,"Corp Bonds":7.5,"Fixed Dep":11.25}
+2025-05-08 21:22:02.234 +05:30 [INF] Added sub-assets for commodities: {"Precious Metals":1.56,"Energy":0.62,"Agriculture":0.31}
+2025-05-08 21:22:02.237 +05:30 [INF] Added sub-assets for cash: {"Liquid Mutual Funds":8.65,"Savings Acc":14.42,"T. Bill":14.42}
+2025-05-08 21:22:02.239 +05:30 [INF] Added sub-assets for realEstate: {"REITs":1,"Residential Prop":1,"Commercial Prop":0.5}
+2025-05-08 21:22:02.278 +05:30 [INF] Final formatted allocation: {"equity":{"percentage":20,"subAssets":{"Large Cap":12.5,"Mid Cap":5,"Small Cap":2.5}},"fixedIncome":{"percentage":37.5,"subAssets":{"Gov Bonds":18.75,"Corp Bonds":7.5,"Fixed Dep":11.25}},"commodities":{"percentage":2.5,"subAssets":{"Precious Metals":1.56,"Energy":0.62,"Agriculture":0.31}},"cash":{"percentage":37.5,"subAssets":{"Liquid Mutual Funds":8.65,"Savings Acc":14.42,"T. Bill":14.42}},"realEstate":{"percentage":2.5,"subAssets":{"REITs":1,"Residential Prop":1,"Commercial Prop":0.5}}}
+2025-05-08 21:22:02.285 +05:30 [INF] Executing OkObjectResult, writing value of type 'WisVestAPI.Models.DTOs.AllocationResultDTO'.
+2025-05-08 21:22:02.298 +05:30 [INF] Executed action WisVestAPI.Controllers.AllocationController.GetAllocation (WisVest) in 243.7708ms
+2025-05-08 21:22:02.301 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.AllocationController.GetAllocation (WisVest)'
+2025-05-08 21:22:02.305 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/Allocation/compute - 200 null application/json; charset=utf-8 298.9255ms
+2025-05-08 21:22:02.311 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5251/api/ProductAllocation/calculate-product-allocations?targetAmount=10000&investmentHorizon=Short - null null
+2025-05-08 21:22:02.315 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:22:02.316 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5251/api/ProductAllocation/calculate-product-allocations?targetAmount=10000&investmentHorizon=Short - 204 null null 5.544ms
+2025-05-08 21:22:02.320 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5251/api/ProductAllocation/calculate-product-allocations?targetAmount=10000&investmentHorizon=Short - application/json 505
+2025-05-08 21:22:02.325 +05:30 [INF] CORS policy execution successful.
+2025-05-08 21:22:02.329 +05:30 [INF] Executing endpoint 'WisVestAPI.Controllers.ProductAllocationController.CalculateProductAllocations (WisVest)'
+2025-05-08 21:22:02.340 +05:30 [INF] Route matched with {action = "CalculateProductAllocations", controller = "ProductAllocation"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CalculateProductAllocations(WisVestAPI.Models.DTOs.AllocationResultDTO, Double, System.String) on controller WisVestAPI.Controllers.ProductAllocationController (WisVest).
+2025-05-08 21:22:02.381 +05:30 [INF] Starting product allocation calculation.
+2025-05-08 21:22:02.385 +05:30 [INF] Loading product data from JSON file: Repositories/Matrix/product_json.json
+2025-05-08 21:22:02.392 +05:30 [INF] Raw JSON Content: {
+  "Equity": {
+    "Large Cap": [
+      {
+        "product_name": "BlueChip Fund ",
+        "asset_class": "Equity",
+        "sub_asset_class": "Large Cap",
+        "annual_return": 10.0,
+        "liquidity": "High",
+        "pros": [
+          "Stable returns",
+          "Low risk"
+        ],
+        "cons": [
+          "Lower growth"
+        ],
+        "description":"A low-risk fund investing in established blue-chip companies offering stable returns.",
+        "risk_level": "Low",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Index Fund ",
+        "asset_class": "Equity",
+        "sub_asset_class": "Large Cap",
+        "annual_return": 9.2,
+        "liquidity": "High",
+        "pros": [
+          "Diversified",
+          "Low cost"
+        ],
+        "cons": [
+          "Market dependent"
+        ],
+        "description":"Tracks major indices, providing diversified exposure with low management cost.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      }
+    ],
+    "Mid Cap": [
+      {
+        "product_name": "Mid Cap Growth ",
+        "asset_class": "Equity",
+        "sub_asset_class": "Mid Cap",
+        "annual_return": 12.5,
+        "liquidity": "Medium",
+        "pros": [
+          "High growth potential"
+        ],
+        "cons": [
+          "Volatile"
+        ],
+        "description":"Targets growing mid-sized companies with high return potential but increased risk.",
+        "risk_level": "High",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "MidCap Blend ",
+        "asset_class": "Equity",
+        "sub_asset_class": "Mid Cap",
+        "annual_return": 11.0,
+        "liquidity": "Medium",
+        "pros": [
+          "Balanced approach"
+        ],
+        "cons": [
+          "Moderate risk"
+        ],
+        "description":"Balances growth and risk by investing in a mix of mid-cap stocks.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      }
+    ],
+    "Small Cap": [
+      {
+        "product_name": "SmallCap Aggressive ",
+        "asset_class": "Equity",
+        "sub_asset_class": "Small Cap",
+        "annual_return": 14.0,
+        "liquidity": "Medium",
+        "pros": [
+          "High return potential"
+        ],
+        "cons": [
+          "Very volatile"
+        ],
+        "description":"An aggressive fund focusing on small companies with strong growth prospects.",
+        "risk_level": "High",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Emerging Companies ",
+        "asset_class": "Equity",
+        "sub_asset_class": "Small Cap",
+        "annual_return": 13.2,
+        "liquidity": "Low",
+        "pros": [
+          "Growth stocks"
+        ],
+        "cons": [
+          "Liquidity risk"
+        ],
+        "description":"Invests in emerging businesses offering growth but with limited liquidity.",
+        "risk_level": "High",
+        "percentage_split": 0
+      }
+    ]
+  },
+  "Fixed Income": {
+    "Gov Bonds": [
+      {
+        "product_name": "Government Bond ",
+        "asset_class": "Fixed Income",
+        "sub_asset_class": "Gov Bonds",
+        "annual_return": 5.0,
+        "liquidity": "Low",
+        "pros": [
+          "Very safe",
+          "Guaranteed return"
+        ],
+        "cons": [
+          "Low return"
+        ],
+        "description":"Safe investment backed by the government, ideal for conservative investors.",
+        "risk_level": "Low",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Sovereign Bond ",
+        "asset_class": "Fixed Income",
+        "sub_asset_class": "Gov Bonds",
+        "annual_return": 4.8,
+        "liquidity": "Low",
+        "pros": [
+          "Stable income"
+        ],
+        "cons": [
+          "Interest rate sensitive"
+        ],
+        "description":"Government-issued bond offering steady income with minimal default risk.",
+        "risk_level": "Low",
+        "percentage_split": 0
+      }
+    ],
+    "Corp Bonds": [
+      {
+        "product_name": "Corporate Bond ",
+        "asset_class": "Fixed Income",
+        "sub_asset_class": "Corp Bonds",
+        "annual_return": 6.8,
+        "liquidity": "Medium",
+        "pros": [
+          "Better return"
+        ],
+        "cons": [
+          "Company risk"
+        ],
+        "description":"Offers higher returns than government bonds with moderate corporate risk.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Private Corp Bond ",
+        "asset_class": "Fixed Income",
+        "sub_asset_class": "Corp Bonds",
+        "annual_return": 7.1,
+        "liquidity": "Medium",
+        "pros": [
+          "Good yield"
+        ],
+        "cons": [
+          "Credit risk"
+        ],
+        "description":"High-yield bond from private corporations with higher associated credit risk.",
+        "risk_level": "High",
+        "percentage_split": 0
+      }
+    ],
+    "Fixed Dep": [
+      {
+        "product_name": "Fixed Deposit ",
+        "asset_class": "Fixed Income",
+        "sub_asset_class": "Fixed Dep",
+        "annual_return": 5.5,
+        "liquidity": "High",
+        "pros": [
+          "Capital safety"
+        ],
+        "cons": [
+          "Low returns"
+        ],
+        "description":"Bank deposit product ensuring principal safety and steady but lower returns.",
+        "risk_level": "Low",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Bank FD ",
+        "asset_class": "Fixed Income",
+        "sub_asset_class": "Fixed Dep",
+        "annual_return": 5.7,
+        "liquidity": "High",
+        "pros": [
+          "Easy access"
+        ],
+        "cons": [
+          "Taxable"
+        ],
+        "description":"Secure savings product offering fixed interest and high liquidity.",
+        "risk_level": "Low",
+        "percentage_split": 0
+      }
+    ]
+  },
+  "Real Estate": {
+    "REITs": [
+      {
+        "product_name": "REITs Trust ",
+        "asset_class": "Real Estate",
+        "sub_asset_class": "REITs",
+        "annual_return": 8.9,
+        "liquidity": "Moderate",
+        "pros": [
+          "Stable returns",
+          "Diversified portfolio"
+        ],
+        "cons": [
+          "Sensitive to interest rates",
+          "Limited growth"
+        ],
+        "description":"A high-liquidity REIT focusing on tax-efficient income generation.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Vanguad Real Estate",
+        "asset_class": "Real Estate",
+        "sub_asset_class": "REITs",
+        "annual_return": 9.5,
+        "liquidity": "High",
+        "pros": [
+          "Tax efficiency",
+          "Regular income"
+        ],
+        "cons": [
+          "Market volatility",
+          "Fees"
+        ],
+        "description":"A diversified real estate investment trust offering stable returns.",
+        "risk_level": "High",
+        "percentage_split": 0
+      }
+    ],
+    "Residential Prop": [
+      {
+        "product_name": "Residential Scheme ",
+        "asset_class": "Real Estate",
+        "sub_asset_class": "Residential Prop",
+        "annual_return": 6.7,
+        "liquidity": "Low",
+        "pros": [
+          "Stable income",
+          "Low volatility"
+        ],
+        "cons": [
+          "Low liquidity",
+          "Maintenance costs"
+        ],
+        "description":"Invests in residential properties for stable rental income.",
+        "risk_level": "Low",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Housing Fund",
+        "asset_class": "Real Estate",
+        "sub_asset_class": "Residential Prop",
+        "annual_return": 7.3,
+        "liquidity": "Moderate",
+        "pros": [
+          "Tax benefits",
+          "Long-term growth"
+        ],
+        "cons": [
+          "Location dependent",
+          "Slow ROI"
+        ],
+        "description":"Focuses on long-term growth through residential property investments.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      }
+    ],
+    "Commercial Prop": [
+      {
+        "product_name": "Commercial Plaza",
+        "asset_class": "Real Estate",
+        "sub_asset_class": "Commercial Prop",
+        "annual_return": 10.2,
+        "liquidity": "Low",
+        "pros": [
+          "High rental yields",
+          "Strong appreciation"
+        ],
+        "cons": [
+          "High initial cost",
+          "Vacancy risk"
+        ],
+        "description":"Targets high rental yields from commercial real estate.",
+        "risk_level": "High",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Office Fund",
+        "asset_class": "Real Estate",
+        "sub_asset_class": "Commercial Prop",
+        "annual_return": 9.8,
+        "liquidity": "Moderate",
+        "pros": [
+          "Steady returns",
+          "Long leases"
+        ],
+        "cons": [
+          "Tenant turnover",
+          "High maintenance"
+        ],
+        "description":"Invests in office spaces with steady returns and long leases.",
+        "risk_level": "High",
+        "percentage_split": 0
+      }
+    ]
+  },
+  "Commodities": {
+    "Precious Metals": [
+      {
+        "product_name": "Gold ETF",
+        "asset_class": "Commodities",
+        "sub_asset_class": "Precious Metals",
+        "annual_return": 7.8,
+        "liquidity": "High",
+        "pros": [
+          "Inflation hedge",
+          "Safe haven asset"
+        ],
+        "cons": [
+          "No income generation",
+          "Price volatility"
+        ],
+        "description":"Invests in gold to provide a hedge against inflation.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Silver Trust",
+        "asset_class": "Commodities",
+        "sub_asset_class": "Precious Metals",
+        "annual_return": 6.3,
+        "liquidity": "High",
+        "pros": [
+          "Alternative investment",
+          "Deflation hedge"
+        ],
+        "cons": [
+          "Subject to price swings",
+          "Not income-producing"
+        ],
+        "description":"Focuses on silver as an alternative investment for diversification.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      }
+    ],
+    "Energy": [
+      {
+        "product_name": "Energy Fund",
+        "asset_class": "Commodities",
+        "sub_asset_class": "Energy",
+        "annual_return": 9.2,
+        "liquidity": "Medium",
+        "pros": [
+          "High demand",
+          "Diversified exposure"
+        ],
+        "cons": [
+          "Subject to price fluctuations",
+          "Geopolitical risks"
+        ],
+        "description":"Provides exposure to energy markets with diversified assets.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Oil & Gas ETF",
+        "asset_class": "Commodities",
+        "sub_asset_class": "Energy",
+        "annual_return": 10.3,
+        "liquidity": "Medium",
+        "pros": [
+          "Strong returns",
+          "Global demand"
+        ],
+        "cons": [
+          "Environmental impact",
+          "Political risk"
+        ],
+        "description":"Targets oil and gas sectors for strong returns and global demand.",
+        "risk_level": "High",
+        "percentage_split": 0
+      }
+    ],
+    "Agriculture": [
+      {
+        "product_name": "Agricultural ETF",
+        "asset_class": "Commodities",
+        "sub_asset_class": "Agriculture",
+        "annual_return": 8.5,
+        "liquidity": "Low",
+        "pros": [
+          "Diversification",
+          "Growth potential"
+        ],
+        "cons": [
+          "Weather dependent",
+          "Global supply issues"
+        ],
+        "description":"Invests in agricultural commodities for growth and diversification.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      },
+      {
+        "product_name": "Crop Futures B",
+        "asset_class": "Commodities",
+        "sub_asset_class": "Agriculture",
+        "annual_return": 7.0,
+        "liquidity": "Low",
+        "pros": [
+          "Alternative to stocks",
+          "Hedge against inflation"
+        ],
+        "cons": [
+          "Market volatility",
+          "Weather sensitivity"
+        ],
+        "description":"Focuses on crop futures to hedge against inflation and market volatility.",
+        "risk_level": "Moderate",
+        "percentage_split": 0
+      }
+    ]
+  },
+  "Cash": {
+    "Liquid Mutual Funds": [
+
+{
+
+"product_name": "Liquid Fund",
+
+"asset_class": "Cash Equivalence",
+
+"sub_asset_class": "Liquid Mutual Funds",
+
+"annual_return": 5.2,
+
+"liquidity": "High",
+
+"pros": ["Quick redemption", "Low risk"],
+
+"cons": ["Lower returns", "Short-term horizon"],
+"description":"Provides quick redemption and low-risk short-term investment.",
+
+"risk_level": "Low",
+
+"percentage_split": 0
+
+},
+
+{
+
+"product_name": "Ultra Short Fund",
+
+"asset_class": "Cash Equivalence",
+
+"sub_asset_class": "Liquid Mutual Funds",
+
+"annual_return": 5.0,
+"liquidity": "High",
+
+"pros": ["Better returns than savings", "High liquidity"],
+
+"cons": ["Interest rate risk", "Short-term only"],
+"description":"Offers slightly better returns with high liquidity for short-term needs.",
+
+"risk_level": "Low",
+
+"percentage_split": 0
+
+}
+
+],
+
+"Savings Acc": [
+
+{
+
+"product_name": "Standard Savings Account",
+
+"asset_class": "Cash Equivalence",
+
+"sub_asset_class": "Savings Acc",
+
+"annual_return": 3.5,
+
+"liquidity": "High",
+
+"pros": ["Very liquid", "Capital safety"],
+
+"cons": ["Very low returns", "Not suitable for growth"],
+"description":"Ensures capital safety with very high liquidity for daily needs.",
+
+"risk_level": "Low",
+
+"percentage_split": 0
+
+},
+
+{
+
+"product_name": "High Interest Savings",
+
+"asset_class": "Cash Equivalence",
+
+"sub_asset_class": "Savings Acc",
+
+"annual_return": 4.0,
+
+"liquidity": "High",
+
+"pros": ["Slightly higher returns", "Safe and accessible"],
+"cons": ["Still low returns", "Inflation risk"],
+"description":"Provides higher interest rates while maintaining accessibility and safety.",
+
+"risk_level": "Low",
+
+"percentage_split": 0
+
+}
+
+],
+
+"T. Bill": [
+
+{
+
+"product_name": "91-Day T-Bill",
+
+"asset_class": "Cash Equivalence",
+
+"sub_asset_class": "T. Bill",
+
+"annual_return": 5.1,
+
+"liquidity": "Moderate",
+
+"pros": ["Government backed", "Low risk"],
+
+"cons": ["Fixed tenure", "Lower yield"],
+"description":"Short-term government-backed investment with moderate liquidity.",
+
+"risk_level": "Low",
+
+"percentage_split": 0
+
+},
+
+{
+
+"product_name": "182-Day T-Bill",
+
+"asset_class": "Cash Equivalence",
+
+"sub_asset_class": "T. Bill",
+
+"annual_return": 5.4,
+
+"liquidity": "Moderate",
+
+"pros": ["Safe investment", "Short maturity"],
+
+"cons": ["Not liquid before maturity", "Limited returns"],
+"description":"Safe short-term investment with slightly higher returns and fixed tenure.",
+
+"risk_level": "Low",
+"percentage_split": 0
+}
+]
+}
+}
+
+2025-05-08 21:22:02.410 +05:30 [INF] Product data loaded successfully.
+2025-05-08 21:22:02.415 +05:30 [INF] Fetching products for Asset Class: equity, Sub-Asset Class: Large Cap.
+2025-05-08 21:22:02.422 +05:30 [INF] Calculating investment amount with PercentageSplit: 6.51, TargetAmount: 10000, AnnualReturn: 10, InvestmentHorizon: Short.
+2025-05-08 21:22:02.429 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.432 +05:30 [INF] Calculated investment amount: 538.02.
+2025-05-08 21:22:02.434 +05:30 [INF] Calculating investment amount with PercentageSplit: 5.99, TargetAmount: 10000, AnnualReturn: 9.2, InvestmentHorizon: Short.
+2025-05-08 21:22:02.437 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.439 +05:30 [INF] Calculated investment amount: 502.32.
+2025-05-08 21:22:02.441 +05:30 [INF] Fetching products for Asset Class: equity, Sub-Asset Class: Mid Cap.
+2025-05-08 21:22:02.443 +05:30 [INF] Calculating investment amount with PercentageSplit: 2.66, TargetAmount: 10000, AnnualReturn: 12.5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.446 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.447 +05:30 [INF] Calculated investment amount: 210.17.
+2025-05-08 21:22:02.448 +05:30 [INF] Calculating investment amount with PercentageSplit: 2.34, TargetAmount: 10000, AnnualReturn: 11, InvestmentHorizon: Short.
+2025-05-08 21:22:02.451 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.452 +05:30 [INF] Calculated investment amount: 189.92.
+2025-05-08 21:22:02.454 +05:30 [INF] Fetching products for Asset Class: equity, Sub-Asset Class: Small Cap.
+2025-05-08 21:22:02.456 +05:30 [INF] Calculating investment amount with PercentageSplit: 1.29, TargetAmount: 10000, AnnualReturn: 14, InvestmentHorizon: Short.
+2025-05-08 21:22:02.458 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.460 +05:30 [INF] Calculated investment amount: 99.26.
+2025-05-08 21:22:02.462 +05:30 [INF] Calculating investment amount with PercentageSplit: 1.21, TargetAmount: 10000, AnnualReturn: 13.2, InvestmentHorizon: Short.
+2025-05-08 21:22:02.464 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.466 +05:30 [INF] Calculated investment amount: 94.43.
+2025-05-08 21:22:02.468 +05:30 [INF] Fetching products for Asset Class: fixedincome, Sub-Asset Class: Gov Bonds.
+2025-05-08 21:22:02.469 +05:30 [INF] Calculating investment amount with PercentageSplit: 9.57, TargetAmount: 10000, AnnualReturn: 5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.471 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.473 +05:30 [INF] Calculated investment amount: 868.03.
+2025-05-08 21:22:02.474 +05:30 [INF] Calculating investment amount with PercentageSplit: 9.18, TargetAmount: 10000, AnnualReturn: 4.8, InvestmentHorizon: Short.
+2025-05-08 21:22:02.477 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.479 +05:30 [INF] Calculated investment amount: 835.83.
+2025-05-08 21:22:02.480 +05:30 [INF] Fetching products for Asset Class: fixedincome, Sub-Asset Class: Corp Bonds.
+2025-05-08 21:22:02.482 +05:30 [INF] Calculating investment amount with PercentageSplit: 3.67, TargetAmount: 10000, AnnualReturn: 6.8, InvestmentHorizon: Short.
+2025-05-08 21:22:02.486 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.488 +05:30 [INF] Calculated investment amount: 321.75.
+2025-05-08 21:22:02.490 +05:30 [INF] Calculating investment amount with PercentageSplit: 3.83, TargetAmount: 10000, AnnualReturn: 7.1, InvestmentHorizon: Short.
+2025-05-08 21:22:02.492 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.495 +05:30 [INF] Calculated investment amount: 333.9.
+2025-05-08 21:22:02.498 +05:30 [INF] Fetching products for Asset Class: fixedincome, Sub-Asset Class: Fixed Dep.
+2025-05-08 21:22:02.499 +05:30 [INF] Calculating investment amount with PercentageSplit: 5.52, TargetAmount: 10000, AnnualReturn: 5.5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.502 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.504 +05:30 [INF] Calculated investment amount: 495.95.
+2025-05-08 21:22:02.506 +05:30 [INF] Calculating investment amount with PercentageSplit: 5.73, TargetAmount: 10000, AnnualReturn: 5.7, InvestmentHorizon: Short.
+2025-05-08 21:22:02.511 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.513 +05:30 [INF] Calculated investment amount: 512.87.
+2025-05-08 21:22:02.514 +05:30 [INF] Fetching products for Asset Class: commodities, Sub-Asset Class: Precious Metals.
+2025-05-08 21:22:02.516 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.86, TargetAmount: 10000, AnnualReturn: 7.8, InvestmentHorizon: Short.
+2025-05-08 21:22:02.517 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.519 +05:30 [INF] Calculated investment amount: 74.
+2025-05-08 21:22:02.520 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.7, TargetAmount: 10000, AnnualReturn: 6.3, InvestmentHorizon: Short.
+2025-05-08 21:22:02.524 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.526 +05:30 [INF] Calculated investment amount: 61.95.
+2025-05-08 21:22:02.528 +05:30 [INF] Fetching products for Asset Class: commodities, Sub-Asset Class: Energy.
+2025-05-08 21:22:02.531 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.29, TargetAmount: 10000, AnnualReturn: 9.2, InvestmentHorizon: Short.
+2025-05-08 21:22:02.534 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.535 +05:30 [INF] Calculated investment amount: 24.32.
+2025-05-08 21:22:02.536 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.33, TargetAmount: 10000, AnnualReturn: 10.3, InvestmentHorizon: Short.
+2025-05-08 21:22:02.539 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.540 +05:30 [INF] Calculated investment amount: 27.12.
+2025-05-08 21:22:02.542 +05:30 [INF] Fetching products for Asset Class: commodities, Sub-Asset Class: Agriculture.
+2025-05-08 21:22:02.543 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.17, TargetAmount: 10000, AnnualReturn: 8.5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.545 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.547 +05:30 [INF] Calculated investment amount: 14.44.
+2025-05-08 21:22:02.548 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.14, TargetAmount: 10000, AnnualReturn: 7, InvestmentHorizon: Short.
+2025-05-08 21:22:02.551 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.554 +05:30 [INF] Calculated investment amount: 12.23.
+2025-05-08 21:22:02.556 +05:30 [INF] Fetching products for Asset Class: cash, Sub-Asset Class: Liquid Mutual Funds.
+2025-05-08 21:22:02.558 +05:30 [INF] Calculating investment amount with PercentageSplit: 4.41, TargetAmount: 10000, AnnualReturn: 5.2, InvestmentHorizon: Short.
+2025-05-08 21:22:02.560 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.562 +05:30 [INF] Calculated investment amount: 398.48.
+2025-05-08 21:22:02.563 +05:30 [INF] Calculating investment amount with PercentageSplit: 4.24, TargetAmount: 10000, AnnualReturn: 5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.565 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.566 +05:30 [INF] Calculated investment amount: 384.58.
+2025-05-08 21:22:02.567 +05:30 [INF] Fetching products for Asset Class: cash, Sub-Asset Class: Savings Acc.
+2025-05-08 21:22:02.569 +05:30 [INF] Calculating investment amount with PercentageSplit: 6.73, TargetAmount: 10000, AnnualReturn: 3.5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.572 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.574 +05:30 [INF] Calculated investment amount: 628.25.
+2025-05-08 21:22:02.575 +05:30 [INF] Calculating investment amount with PercentageSplit: 7.69, TargetAmount: 10000, AnnualReturn: 4, InvestmentHorizon: Short.
+2025-05-08 21:22:02.579 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.581 +05:30 [INF] Calculated investment amount: 710.98.
+2025-05-08 21:22:02.582 +05:30 [INF] Fetching products for Asset Class: cash, Sub-Asset Class: T. Bill.
+2025-05-08 21:22:02.584 +05:30 [INF] Calculating investment amount with PercentageSplit: 7, TargetAmount: 10000, AnnualReturn: 5.1, InvestmentHorizon: Short.
+2025-05-08 21:22:02.588 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.589 +05:30 [INF] Calculated investment amount: 633.71.
+2025-05-08 21:22:02.591 +05:30 [INF] Calculating investment amount with PercentageSplit: 7.42, TargetAmount: 10000, AnnualReturn: 5.4, InvestmentHorizon: Short.
+2025-05-08 21:22:02.593 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.595 +05:30 [INF] Calculated investment amount: 667.92.
+2025-05-08 21:22:02.596 +05:30 [INF] Fetching products for Asset Class: realestate, Sub-Asset Class: REITs.
+2025-05-08 21:22:02.598 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.48, TargetAmount: 10000, AnnualReturn: 8.9, InvestmentHorizon: Short.
+2025-05-08 21:22:02.599 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.601 +05:30 [INF] Calculated investment amount: 40.47.
+2025-05-08 21:22:02.602 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.52, TargetAmount: 10000, AnnualReturn: 9.5, InvestmentHorizon: Short.
+2025-05-08 21:22:02.605 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.606 +05:30 [INF] Calculated investment amount: 43.37.
+2025-05-08 21:22:02.608 +05:30 [INF] Fetching products for Asset Class: realestate, Sub-Asset Class: Residential Prop.
+2025-05-08 21:22:02.610 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.48, TargetAmount: 10000, AnnualReturn: 6.7, InvestmentHorizon: Short.
+2025-05-08 21:22:02.613 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.615 +05:30 [INF] Calculated investment amount: 42.16.
+2025-05-08 21:22:02.616 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.52, TargetAmount: 10000, AnnualReturn: 7.3, InvestmentHorizon: Short.
+2025-05-08 21:22:02.617 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.619 +05:30 [INF] Calculated investment amount: 45.17.
+2025-05-08 21:22:02.620 +05:30 [INF] Fetching products for Asset Class: realestate, Sub-Asset Class: Commercial Prop.
+2025-05-08 21:22:02.622 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.26, TargetAmount: 10000, AnnualReturn: 10.2, InvestmentHorizon: Short.
+2025-05-08 21:22:02.624 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.625 +05:30 [INF] Calculated investment amount: 21.41.
+2025-05-08 21:22:02.626 +05:30 [INF] Calculating investment amount with PercentageSplit: 0.25, TargetAmount: 10000, AnnualReturn: 9.8, InvestmentHorizon: Short.
+2025-05-08 21:22:02.629 +05:30 [INF] Parsed investment horizon: 2 years.
+2025-05-08 21:22:02.630 +05:30 [INF] Calculated investment amount: 20.74.
+2025-05-08 21:22:02.634 +05:30 [INF] Final Product Allocations: {"equity":{"Large Cap":{"BlueChip Fund ":{"product_name":"BlueChip Fund ","annual_return":10,"asset_class":"Equity","sub_asset_class":"Large Cap","liquidity":"High","pros":["Stable returns","Low risk"],"cons":["Lower growth"],"risk_level":"Low","percentage_split":6.51,"InvestmentAmount":538.02},"Index Fund ":{"product_name":"Index Fund ","annual_return":9.2,"asset_class":"Equity","sub_asset_class":"Large Cap","liquidity":"High","pros":["Diversified","Low cost"],"cons":["Market dependent"],"risk_level":"Moderate","percentage_split":5.99,"InvestmentAmount":502.32}},"Mid Cap":{"Mid Cap Growth ":{"product_name":"Mid Cap Growth ","annual_return":12.5,"asset_class":"Equity","sub_asset_class":"Mid Cap","liquidity":"Medium","pros":["High growth potential"],"cons":["Volatile"],"risk_level":"High","percentage_split":2.66,"InvestmentAmount":210.17},"MidCap Blend ":{"product_name":"MidCap Blend ","annual_return":11,"asset_class":"Equity","sub_asset_class":"Mid Cap","liquidity":"Medium","pros":["Balanced approach"],"cons":["Moderate risk"],"risk_level":"Moderate","percentage_split":2.34,"InvestmentAmount":189.92}},"Small Cap":{"SmallCap Aggressive ":{"product_name":"SmallCap Aggressive ","annual_return":14,"asset_class":"Equity","sub_asset_class":"Small Cap","liquidity":"Medium","pros":["High return potential"],"cons":["Very volatile"],"risk_level":"High","percentage_split":1.29,"InvestmentAmount":99.26},"Emerging Companies ":{"product_name":"Emerging Companies ","annual_return":13.2,"asset_class":"Equity","sub_asset_class":"Small Cap","liquidity":"Low","pros":["Growth stocks"],"cons":["Liquidity risk"],"risk_level":"High","percentage_split":1.21,"InvestmentAmount":94.43}}},"fixedIncome":{"Gov Bonds":{"Government Bond ":{"product_name":"Government Bond ","annual_return":5,"asset_class":"Fixed Income","sub_asset_class":"Gov Bonds","liquidity":"Low","pros":["Very safe","Guaranteed return"],"cons":["Low return"],"risk_level":"Low","percentage_split":9.57,"InvestmentAmount":868.03},"Sovereign Bond ":{"product_name":"Sovereign Bond ","annual_return":4.8,"asset_class":"Fixed Income","sub_asset_class":"Gov Bonds","liquidity":"Low","pros":["Stable income"],"cons":["Interest rate sensitive"],"risk_level":"Low","percentage_split":9.18,"InvestmentAmount":835.83}},"Corp Bonds":{"Corporate Bond ":{"product_name":"Corporate Bond ","annual_return":6.8,"asset_class":"Fixed Income","sub_asset_class":"Corp Bonds","liquidity":"Medium","pros":["Better return"],"cons":["Company risk"],"risk_level":"Moderate","percentage_split":3.67,"InvestmentAmount":321.75},"Private Corp Bond ":{"product_name":"Private Corp Bond ","annual_return":7.1,"asset_class":"Fixed Income","sub_asset_class":"Corp Bonds","liquidity":"Medium","pros":["Good yield"],"cons":["Credit risk"],"risk_level":"High","percentage_split":3.83,"InvestmentAmount":333.9}},"Fixed Dep":{"Fixed Deposit ":{"product_name":"Fixed Deposit ","annual_return":5.5,"asset_class":"Fixed Income","sub_asset_class":"Fixed Dep","liquidity":"High","pros":["Capital safety"],"cons":["Low returns"],"risk_level":"Low","percentage_split":5.52,"InvestmentAmount":495.95},"Bank FD ":{"product_name":"Bank FD ","annual_return":5.7,"asset_class":"Fixed Income","sub_asset_class":"Fixed Dep","liquidity":"High","pros":["Easy access"],"cons":["Taxable"],"risk_level":"Low","percentage_split":5.73,"InvestmentAmount":512.87}}},"commodities":{"Precious Metals":{"Gold ETF":{"product_name":"Gold ETF","annual_return":7.8,"asset_class":"Commodities","sub_asset_class":"Precious Metals","liquidity":"High","pros":["Inflation hedge","Safe haven asset"],"cons":["No income generation","Price volatility"],"risk_level":"Moderate","percentage_split":0.86,"InvestmentAmount":74},"Silver Trust":{"product_name":"Silver Trust","annual_return":6.3,"asset_class":"Commodities","sub_asset_class":"Precious Metals","liquidity":"High","pros":["Alternative investment","Deflation hedge"],"cons":["Subject to price swings","Not income-producing"],"risk_level":"Moderate","percentage_split":0.7,"InvestmentAmount":61.95}},"Energy":{"Energy Fund":{"product_name":"Energy Fund","annual_return":9.2,"asset_class":"Commodities","sub_asset_class":"Energy","liquidity":"Medium","pros":["High demand","Diversified exposure"],"cons":["Subject to price fluctuations","Geopolitical risks"],"risk_level":"Moderate","percentage_split":0.29,"InvestmentAmount":24.32},"Oil \u0026 Gas ETF":{"product_name":"Oil \u0026 Gas ETF","annual_return":10.3,"asset_class":"Commodities","sub_asset_class":"Energy","liquidity":"Medium","pros":["Strong returns","Global demand"],"cons":["Environmental impact","Political risk"],"risk_level":"High","percentage_split":0.33,"InvestmentAmount":27.12}},"Agriculture":{"Agricultural ETF":{"product_name":"Agricultural ETF","annual_return":8.5,"asset_class":"Commodities","sub_asset_class":"Agriculture","liquidity":"Low","pros":["Diversification","Growth potential"],"cons":["Weather dependent","Global supply issues"],"risk_level":"Moderate","percentage_split":0.17,"InvestmentAmount":14.44},"Crop Futures B":{"product_name":"Crop Futures B","annual_return":7,"asset_class":"Commodities","sub_asset_class":"Agriculture","liquidity":"Low","pros":["Alternative to stocks","Hedge against inflation"],"cons":["Market volatility","Weather sensitivity"],"risk_level":"Moderate","percentage_split":0.14,"InvestmentAmount":12.23}}},"cash":{"Liquid Mutual Funds":{"Liquid Fund":{"product_name":"Liquid Fund","annual_return":5.2,"asset_class":"Cash Equivalence","sub_asset_class":"Liquid Mutual Funds","liquidity":"High","pros":["Quick redemption","Low risk"],"cons":["Lower returns","Short-term horizon"],"risk_level":"Low","percentage_split":4.41,"InvestmentAmount":398.48},"Ultra Short Fund":{"product_name":"Ultra Short Fund","annual_return":5,"asset_class":"Cash Equivalence","sub_asset_class":"Liquid Mutual Funds","liquidity":"High","pros":["Better returns than savings","High liquidity"],"cons":["Interest rate risk","Short-term only"],"risk_level":"Low","percentage_split":4.24,"InvestmentAmount":384.58}},"Savings Acc":{"Standard Savings Account":{"product_name":"Standard Savings Account","annual_return":3.5,"asset_class":"Cash Equivalence","sub_asset_class":"Savings Acc","liquidity":"High","pros":["Very liquid","Capital safety"],"cons":["Very low returns","Not suitable for growth"],"risk_level":"Low","percentage_split":6.73,"InvestmentAmount":628.25},"High Interest Savings":{"product_name":"High Interest Savings","annual_return":4,"asset_class":"Cash Equivalence","sub_asset_class":"Savings Acc","liquidity":"High","pros":["Slightly higher returns","Safe and accessible"],"cons":["Still low returns","Inflation risk"],"risk_level":"Low","percentage_split":7.69,"InvestmentAmount":710.98}},"T. Bill":{"91-Day T-Bill":{"product_name":"91-Day T-Bill","annual_return":5.1,"asset_class":"Cash Equivalence","sub_asset_class":"T. Bill","liquidity":"Moderate","pros":["Government backed","Low risk"],"cons":["Fixed tenure","Lower yield"],"risk_level":"Low","percentage_split":7,"InvestmentAmount":633.71},"182-Day T-Bill":{"product_name":"182-Day T-Bill","annual_return":5.4,"asset_class":"Cash Equivalence","sub_asset_class":"T. Bill","liquidity":"Moderate","pros":["Safe investment","Short maturity"],"cons":["Not liquid before maturity","Limited returns"],"risk_level":"Low","percentage_split":7.42,"InvestmentAmount":667.92}}},"realEstate":{"REITs":{"REITs Trust ":{"product_name":"REITs Trust ","annual_return":8.9,"asset_class":"Real Estate","sub_asset_class":"REITs","liquidity":"Moderate","pros":["Stable returns","Diversified portfolio"],"cons":["Sensitive to interest rates","Limited growth"],"risk_level":"Moderate","percentage_split":0.48,"InvestmentAmount":40.47},"Vanguad Real Estate":{"product_name":"Vanguad Real Estate","annual_return":9.5,"asset_class":"Real Estate","sub_asset_class":"REITs","liquidity":"High","pros":["Tax efficiency","Regular income"],"cons":["Market volatility","Fees"],"risk_level":"High","percentage_split":0.52,"InvestmentAmount":43.37}},"Residential Prop":{"Residential Scheme ":{"product_name":"Residential Scheme ","annual_return":6.7,"asset_class":"Real Estate","sub_asset_class":"Residential Prop","liquidity":"Low","pros":["Stable income","Low volatility"],"cons":["Low liquidity","Maintenance costs"],"risk_level":"Low","percentage_split":0.48,"InvestmentAmount":42.16},"Housing Fund":{"product_name":"Housing Fund","annual_return":7.3,"asset_class":"Real Estate","sub_asset_class":"Residential Prop","liquidity":"Moderate","pros":["Tax benefits","Long-term growth"],"cons":["Location dependent","Slow ROI"],"risk_level":"Moderate","percentage_split":0.52,"InvestmentAmount":45.17}},"Commercial Prop":{"Commercial Plaza":{"product_name":"Commercial Plaza","annual_return":10.2,"asset_class":"Real Estate","sub_asset_class":"Commercial Prop","liquidity":"Low","pros":["High rental yields","Strong appreciation"],"cons":["High initial cost","Vacancy risk"],"risk_level":"High","percentage_split":0.26,"InvestmentAmount":21.41},"Office Fund":{"product_name":"Office Fund","annual_return":9.8,"asset_class":"Real Estate","sub_asset_class":"Commercial Prop","liquidity":"Moderate","pros":["Steady returns","Long leases"],"cons":["Tenant turnover","High maintenance"],"risk_level":"High","percentage_split":0.25,"InvestmentAmount":20.74}}}}
+2025-05-08 21:22:02.640 +05:30 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[WisVestAPI.Services.Product, WisVest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-08 21:22:02.644 +05:30 [INF] Executed action WisVestAPI.Controllers.ProductAllocationController.CalculateProductAllocations (WisVest) in 300.4442ms
+2025-05-08 21:22:02.646 +05:30 [INF] Executed endpoint 'WisVestAPI.Controllers.ProductAllocationController.CalculateProductAllocations (WisVest)'
+2025-05-08 21:22:02.647 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5251/api/ProductAllocation/calculate-product-allocations?targetAmount=10000&investmentHorizon=Short - 200 null application/json; charset=utf-8 327.3288ms
